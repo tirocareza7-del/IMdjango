@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><title>CampusConnect</title></head>
+<head><title>{% block title %}CampusConnect{% endblock %}</title></head>
 <body>
 <nav>
 {% if user.is_authenticated %}
@@ -16,6 +16,8 @@
 </nav>
  
 <main>{% block content %}{% endblock %}</main>
+<footer>
+    {% block footer %}CampusConnect &copy; 2026{% endblock %}
+</footer>
 </body>
 </html>
- 
